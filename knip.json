@@ -1,0 +1,20 @@
+{
+  "$schema": "https://unpkg.com/knip@3/schema.json",
+  "entry": ["src/main.tsx", "src/App.tsx"],
+  "project": ["src/**/*.{ts,tsx}"],
+  "ignoreDependencies": [
+    "typescript-eslint",
+    "@types/*",
+    "eslint-plugin-*",
+    "globals"
+  ],
+  "ignoreExportsUsedInFile": true,
+  "rules": {
+    "classMembers": "error",
+    "enumMembers": "error",
+    "exports": "error",
+    "types": "error",
+    "files": "error",
+    "dependencies": "error"
+  }
+}

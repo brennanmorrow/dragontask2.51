@@ -1,0 +1,283 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #EF4444;
+  --color-secondary: #B91C1C;
+  --color-accent: #FCA5A5;
+}
+
+@layer base {
+  /* Apply theme colors to base elements */
+  a {
+    @apply text-primary hover:text-secondary;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-gray-900;
+  }
+  
+  button:focus, input:focus, select:focus, textarea:focus {
+    @apply outline-none ring-2 ring-primary ring-opacity-50;
+  }
+}
+
+@layer components {
+  /* Primary Button */
+  .btn-primary {
+    @apply inline-flex items-center px-4 py-2 border border-transparent 
+           text-sm font-medium rounded-md shadow-sm text-white 
+           bg-primary hover:bg-secondary focus:outline-none 
+           focus:ring-2 focus:ring-offset-2 focus:ring-primary;
+  }
+  
+  /* Secondary Button */
+  .btn-secondary {
+    @apply inline-flex items-center px-4 py-2 border border-gray-300 
+           text-sm font-medium rounded-md text-gray-700 bg-white 
+           hover:bg-gray-50 focus:outline-none focus:ring-2 
+           focus:ring-offset-2 focus:ring-primary;
+  }
+  
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full 
+           text-xs font-medium;
+  }
+  
+  .badge-primary {
+    @apply bg-primary bg-opacity-10 text-primary;
+  }
+  
+  .badge-secondary {
+    @apply bg-secondary bg-opacity-10 text-secondary;
+  }
+  
+  .badge-accent {
+    @apply bg-accent bg-opacity-20 text-secondary;
+  }
+  
+  /* Card */
+  .card {
+    @apply bg-white shadow rounded-lg overflow-hidden;
+  }
+  
+  .card-header {
+    @apply px-4 py-5 border-b border-gray-200 sm:px-6;
+  }
+  
+  .card-body {
+    @apply px-4 py-5 sm:p-6;
+  }
+  
+  .card-footer {
+    @apply px-4 py-4 border-t border-gray-200 sm:px-6;
+  }
+  
+  /* Form elements */
+  .form-input {
+    @apply block w-full rounded-md border-gray-300 shadow-sm 
+           focus:border-primary focus:ring-primary sm:text-sm;
+  }
+  
+  .form-select {
+    @apply block w-full rounded-md border-gray-300 shadow-sm 
+           focus:border-primary focus:ring-primary sm:text-sm;
+  }
+  
+  .form-checkbox {
+    @apply h-4 w-4 rounded border-gray-300 text-primary 
+           focus:ring-primary;
+  }
+  
+  .form-radio {
+    @apply h-4 w-4 border-gray-300 text-primary 
+           focus:ring-primary;
+  }
+  
+  /* Navigation */
+  .nav-link {
+    @apply flex items-center px-3 py-2 text-sm font-medium rounded-md;
+  }
+  
+  .nav-link-active {
+    @apply bg-primary bg-opacity-10 text-primary;
+  }
+  
+  .nav-link-inactive {
+    @apply text-gray-700 hover:bg-gray-50;
+  }
+}
+
+/* Custom utility classes for theme colors */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.border-primary {
+  border-color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.border-secondary {
+  border-color: var(--color-secondary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.border-accent {
+  border-color: var(--color-accent);
+}
+
+.ring-primary {
+  --tw-ring-color: var(--color-primary);
+}
+
+.ring-secondary {
+  --tw-ring-color: var(--color-secondary);
+}
+
+.ring-accent {
+  --tw-ring-color: var(--color-accent);
+}
+
+.hover\:bg-primary:hover {
+  background-color: var(--color-primary);
+}
+
+.hover\:bg-secondary:hover {
+  background-color: var(--color-secondary);
+}
+
+.hover\:bg-accent:hover {
+  background-color: var(--color-accent);
+}
+
+.hover\:text-primary:hover {
+  color: var(--color-primary);
+}
+
+.hover\:text-secondary:hover {
+  color: var(--color-secondary);
+}
+
+.hover\:text-accent:hover {
+  color: var(--color-accent);
+}
+
+.focus\:ring-primary:focus {
+  --tw-ring-color: var(--color-primary);
+}
+
+.focus\:border-primary:focus {
+  border-color: var(--color-primary);
+}
+
+/* Rich Text Editor Styles */
+.ProseMirror {
+  min-height: 200px;
+  outline: none;
+}
+
+.ProseMirror p {
+  margin-bottom: 1em;
+}
+
+.ProseMirror h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.ProseMirror h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.ProseMirror h3 {
+  font-size: 1.25em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.ProseMirror ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.ProseMirror ol {
+  list-style-type: decimal;
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.ProseMirror blockquote {
+  border-left: 3px solid #e5e7eb;
+  padding-left: 1em;
+  color: #6b7280;
+  margin-bottom: 1em;
+}
+
+.ProseMirror a {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+.ProseMirror img {
+  max-width: 100%;
+  height: auto;
+}
+
+.ProseMirror table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+
+.ProseMirror table td,
+.ProseMirror table th {
+  border: 2px solid #e5e7eb;
+  padding: 0.5em;
+  position: relative;
+}
+
+.ProseMirror table th {
+  background-color: #f3f4f6;
+  font-weight: bold;
+}
+
+.ProseMirror .is-empty::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: #9ca3af;
+  pointer-events: none;
+  height: 0;
+}
+
+.ProseMirror .highlight {
+  background-color: #fef08a;
+  border-radius: 0.25em;
+  padding: 0.1em 0.2em;
+}
